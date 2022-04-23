@@ -5,6 +5,7 @@ I am syllable to pitch relations
 """
 
 # Singing requires a phoneme with an annotated pitch for each syllable.
+
 solfa = [
     "#115DOWWWWWW",   # Doh
     "#103REYYYYYY",   # Re
@@ -24,7 +25,7 @@ solfa.reverse()
 down = ''.join(solfa)
 def sing_down():
     sing(down, speed=50)
-    
+solfa.reverse()    
 
 
 def ahem():

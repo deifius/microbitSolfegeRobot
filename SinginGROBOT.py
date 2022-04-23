@@ -1,5 +1,5 @@
 from solfege import pronounce, sing, solfa, ahem
-from sing_dance_map import dances
+from dances import dances
 from microbit import sleep, Image, button_a, button_b, display, accelerometer
 
 """
