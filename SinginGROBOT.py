@@ -1,11 +1,12 @@
-from speech import pronounce, sing
+from solfege import pronounce, sing, solfa
 from microbit import sleep, Image, button_a, button_b, display, accelerometer
 
-# The say method attempts to convert English into phonemes.
-#say("I can sing!")
-#sleep(1000)
-#say("Listen to me!")
-#sleep(1000)
+"""
+I am a little robot that sings as you dance with me
+hold me in your hand and turn me around
+I can remember the song if you remember the hand dance
+"""
+
 
 def ahem():
     # Clearing the throat requires the use of phonemes. Changing
@@ -13,38 +14,13 @@ def ahem():
     pronounce("AEAE/HAEMM", pitch=200, speed=100)  # Ahem
     sleep(1000)
 
-# Singing requires a phoneme with an annotated pitch for each syllable.
-solfa = [
-    "#115DOWWWWWW",   # Doh
-    "#103REYYYYYY",   # Re
-    "#94MIYYYYYY",    # Mi
-    "#88FAOAOAOAOR",  # Fa
-    "#78SOHWWWWW",    # Soh
-    "#70LAOAOAOAOR",  # La
-    "#62TIYYYYYY",    # Ti
-    "#58DOWWWWWW",    # Doh
-]
-
-fegio = f'#{note}{syllable}'
-up = ''.join(solfa)# Sing the scale ascending in pitch.
-def sing_up():
-    sing(up, speed=50)
-solfa.reverse()
-down = ''.join(solfa)
-def sing_down():
-    sing(down, speed=50)
-gesture = 'nothing yet'
-
-def main()
+def main():
     ahem()
     while True:
+        gesture = 'nothing yet'
         last_gesture = gesture
         gesture = accelerometer.current_gesture()
         if last_gesture != gesture:
-            if gesture == "up":
-                display.show(Image.CLOCK12)
-                sing(solfa[0], speed=100)
-                #sleep(1000)
             if gesture == "down":
                 display.show(Image.CLOCK6)
                 sing(solfa[1], speed=100)
