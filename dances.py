@@ -32,4 +32,30 @@ class dances:
         display.show(Image.CLOCK6)
         sing(solfa[5], speed=100)
         #sleep(1000)
-    dance = {'up':up,'down':down,'right':right,'left':left,'face up':face_up,'face down':face_down}
+    def freefall():
+        display.show(Image.SURPRISE)
+        sing(solfa[6], speed=400)
+    def GGG():
+        display.show(Image.SURPRISE)
+        sing(solfa[6], speed=400)
+    def GGGGGG():
+        display.show(Image.SURPRISE)
+        sing(solfa[6], speed=400)
+    def GGGGGGGG():
+        display.show(Image.SURPRISE)
+        sing(solfa[6], speed=400)
+    def shake():
+        display.show(Image.SURPRISE)
+        sing(solfa[6], speed=400)
+    dance = {
+        'up':up,
+        'down':down,
+        'right':right,
+        'left':left,
+        'face up':face_up,
+        'face down':face_down,
+        'freefall':freefall,
+        '3g':GGG,
+        '6g':GGGGGG,
+        '8g':GGGGGGGG,
+        'shake':shake}

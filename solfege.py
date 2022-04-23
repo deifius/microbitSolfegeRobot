@@ -32,4 +32,3 @@ def ahem():
     # Clearing the throat requires the use of phonemes. Changing
     # the pitch and speed also helps create the right effect.
     pronounce("AEAE/HAEMM", pitch=200, speed=100)  # Ahem
-    sleep(1000)
