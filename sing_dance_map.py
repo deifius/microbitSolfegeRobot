@@ -1,4 +1,5 @@
-from solfege import pronounce, sing, solfa
+from solfege import solfa
+from speech import sing
 from microbit import display, Image
 
 """
@@ -8,7 +9,6 @@ to sing actions
 
 class dances:
     def up():
-        print('yo!')
         display.show(Image.ARROW_N)
         sing(solfa[0], speed=100)
         #sleep(1000)
